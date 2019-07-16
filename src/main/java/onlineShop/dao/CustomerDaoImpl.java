@@ -1,3 +1,4 @@
+
 package onlineShop.dao;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -30,16 +31,19 @@ public class CustomerDaoImpl implements CustomerDao {
 		Cart cart = new Cart();
 		customer.setCart(cart);
 		cart.setCustomer(customer);
-		
-		try (Session session = sessionFactory.openSession()) {
+		Session session = null;
+		try {
+			session = sessionFactory.openSession();
 			session.beginTransaction();
 			session.save(authorities);
 			session.save(customer);
 			session.getTransaction().commit();
 		} catch (Exception e) {
+			session.getTransaction().rollback();
 			e.printStackTrace();
 		}
 	}
+
 
 	public Customer getCustomerByUserName(String userName) {
 		User user = null;
@@ -57,3 +61,5 @@ public class CustomerDaoImpl implements CustomerDao {
 		return null;
 	}
 }
+
+

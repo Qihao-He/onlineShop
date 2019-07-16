@@ -1,3 +1,4 @@
+
 package onlineShop.controller;
 
 import javax.validation.Valid;
@@ -31,13 +32,16 @@ public class RegistrationController {
 	}
 
 	@PostMapping
-	public String registerCustomer(@Valid @ModelAttribute(value = "customer") Customer customer, Model model,
+	public ModelAndView registerCustomer(@Valid @ModelAttribute(value = "customer") Customer customer,
 			BindingResult result) {
+		ModelAndView modelAndView = new ModelAndView();
 		if (result.hasErrors()) {
-			return "register";
+			modelAndView.setViewName("register");
+			return modelAndView;
 		}
 		customerService.addCustomer(customer);
-		model.addAttribute("registrationSuccess", "Registered Successfully. Login using username and password");
-		return "login";
+		modelAndView.setViewName("login");
+		modelAndView.addObject("registrationSuccess", "Registered Successfully. Login using username and password");
+		return modelAndView;
 	}
 }

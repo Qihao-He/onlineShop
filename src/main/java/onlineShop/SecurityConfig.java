@@ -41,6 +41,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.usersByUsernameQuery("SELECT emailId, password, enabled FROM users WHERE emailId=?")
 			.authoritiesByUsernameQuery("SELECT emailId, authorities FROM authorities WHERE emailId=?");
 		
-	}
-	
+	}	
 }
