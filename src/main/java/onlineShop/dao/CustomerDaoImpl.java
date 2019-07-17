@@ -41,6 +41,10 @@ public class CustomerDaoImpl implements CustomerDao {
 		} catch (Exception e) {
 			session.getTransaction().rollback();
 			e.printStackTrace();
+		} finally {
+			if (session != null) {
+				session.close();
+			}
 		}
 	}
 
