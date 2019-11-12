@@ -16,10 +16,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerService.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/controller/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="120">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -46,11 +46,11 @@
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/dao/CartItemDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/dao/CartDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/dao/CustomerDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/service/CartServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/service/CartItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/service/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/onlineShop/service/SalesOrderServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -270,12 +270,12 @@
       <workItem from="1573410906827" duration="319000" />
       <workItem from="1573424566420" duration="8419000" />
       <workItem from="1573499568361" duration="270000" />
-      <workItem from="1573514253744" duration="6823000" />
+      <workItem from="1573514253744" duration="7570000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18628000" />
+    <option name="totallyTimeSpent" value="19375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="960" y="23" width="960" height="1177" extended-state="0" />
@@ -457,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/dao/CartDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -571,31 +564,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/CartServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="150">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/ProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/dao/CustomerDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/service/CustomerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#454#455#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/onlineShop/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
