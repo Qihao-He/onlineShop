@@ -15,6 +15,7 @@ public class CartItemDaoImpl implements CartItemDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	@Override
 	public void addCartItem(CartItem cartItem) {
 		Session session = null;
 		try {
@@ -29,34 +30,36 @@ public class CartItemDaoImpl implements CartItemDao {
 			if (session != null) {
 			session.close();
 		}
-	}
-}
-
-public void removeCartItem(int CartItemId) {
-	Session session = null;
-	try {
-		session = sessionFactory.openSession();
-		CartItem cartItem = (CartItem) session.get(CartItem.class, CartItemId);
-		Cart cart = cartItem.getCart();
-		List<CartItem> cartItems = cart.getCartItem();
-		cartItems.remove(cartItem);
-		session.beginTransaction();
-		session.delete(cartItem);
-		session.getTransaction().commit();
-	} catch (Exception e) {
-		e.printStackTrace();
-		session.getTransaction().rollback();
-	} finally {
-		if (session != null) {
-			session.close();
 		}
 	}
-}
 
-public void removeAllCartItems(Cart cart) {
-	List<CartItem> cartItems = cart.getCartItem();
-	for (CartItem cartItem : cartItems) {
-		removeCartItem(cartItem.getId());
+	@Override
+	public void removeCartItem(int CartItemId) {
+		Session session = null;
+		try {
+			session = sessionFactory.openSession();
+			CartItem cartItem = (CartItem) session.get(CartItem.class, CartItemId);
+			Cart cart = cartItem.getCart();
+			List<CartItem> cartItems = cart.getCartItem();
+			cartItems.remove(cartItem);
+			session.beginTransaction();
+			session.delete(cartItem);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			session.getTransaction().rollback();
+		} finally {
+			if (session != null) {
+				session.close();
+			}
+		}
 	}
-}
+
+	@Override
+	public void removeAllCartItems(Cart cart) {
+		List<CartItem> cartItems = cart.getCartItem();
+		for (CartItem cartItem : cartItems) {
+			removeCartItem(cartItem.getId());
+		}
+	}
 }

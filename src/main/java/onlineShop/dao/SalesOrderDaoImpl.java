@@ -13,6 +13,7 @@ public class SalesOrderDaoImpl implements SalesOrderDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	@Override
 	public void addSalesOrder(SalesOrder salesOrder) {
 		Session session = null;
 		try {

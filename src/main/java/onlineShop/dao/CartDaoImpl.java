@@ -16,6 +16,7 @@ public class CartDaoImpl implements CartDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	@Override
 	public Cart getCartById(int CartId) {
 		Cart cart = null;
 		try (Session session = sessionFactory.openSession()) {
@@ -28,6 +29,7 @@ public class CartDaoImpl implements CartDao {
 		return cart;
 	}
 
+	@Override
 	public Cart validate(int cartId) throws IOException {
 		Cart cart = getCartById(cartId);
 		if (cart == null || cart.getCartItem().size() == 0) {
