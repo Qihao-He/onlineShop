@@ -12,7 +12,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private DataSource dataSource;
-	
+
+	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.csrf().disable()
@@ -30,7 +31,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.logoutUrl("/logout");
 			
 	}
-	
+
+	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth
 			.inMemoryAuthentication().withUser("admin@gmail.com").password("111111").authorities("ROLE_ADMIN");
