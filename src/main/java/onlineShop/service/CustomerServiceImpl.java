@@ -12,10 +12,12 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerDao customerDao;
 
+    @Override
     public void addCustomer(Customer customer) {   	 
    	 customerDao.addCustomer(customer);
     }
 
+    @Override
     public Customer getCustomerByUserName(String userName) {
    	 return customerDao.getCustomerByUserName(userName);
     }
