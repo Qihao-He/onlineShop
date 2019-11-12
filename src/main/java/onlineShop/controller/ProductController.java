@@ -72,8 +72,8 @@ public class ProductController {
 		MultipartFile image = product.getProductImage();
 		if (image != null && !image.isEmpty()) {
 			// Path path = Paths.get("/Users/xxx/products/" + product.getId() + ".jpg");
-			Path path = Paths.get("/Users/qihaohe/Documents/workspace/onlineShop/products/" + product.getId() + ".jpg");
-
+			Path path = Paths.get("/Users/qihaohe/Documents/workspace/onlineShop/products/" + product.getId()
+					+ ".jpg");
 			try {
 				image.transferTo(new File(path.toString()));
 			} catch (IllegalStateException | IOException e) {
