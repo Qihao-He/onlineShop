@@ -14,11 +14,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void addCustomer(Customer customer) {   	 
-   	 customerDao.addCustomer(customer);
+   	    customerDao.addCustomer(customer);
     }
 
     @Override
     public Customer getCustomerByUserName(String userName) {
-   	 return customerDao.getCustomerByUserName(userName);
+   	    return customerDao.getCustomerByUserName(userName);
     }
 }
